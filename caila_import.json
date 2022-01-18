@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "test_as-42175-wdp",
-    "name" : "test_as-42175-wdp",
+    "id" : "smart_code_kanvasik-404307-lix",
+    "name" : "smart_code_kanvasik-404307-lix",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -9,7 +9,8 @@
     "spellingCorrection" : false,
     "classificationAlgorithm" : "sts",
     "timezone" : "UTC",
-    "shared" : false
+    "businessShared" : false,
+    "business" : false
   },
   "intents" : [ ],
   "entities" : [ ],
