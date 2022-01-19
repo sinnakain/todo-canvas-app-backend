@@ -12,7 +12,13 @@
     "businessShared" : false,
     "business" : false
   },
-  "intents" : [ ],
+  "intents" : [ {
+    "id" : 292516,
+    "path" : "/Новый интент",
+    "enabled" : true,
+    "businessShared" : false,
+    "business" : false
+  } ],
   "entities" : [ ],
   "enabledSystemEntities" : [ "duckling.number" ]
 }
