@@ -4,6 +4,12 @@
 #     event!: action_id
 
 theme: /
+    state: ПростойАктион
+        event!: simple_action
+        event!: SIMPLE_ACTION
+        
+        a: Отлично!
+    
     
     state: ЗаданиеВыполнено
         event!: done

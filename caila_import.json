@@ -18,6 +18,12 @@
     "enabled" : true,
     "businessShared" : false,
     "business" : false
+  }, {
+    "id" : 298635,
+    "path" : "/Новый интент 1",
+    "enabled" : true,
+    "businessShared" : false,
+    "business" : false
   } ],
   "entities" : [ ],
   "enabledSystemEntities" : [ "duckling.number" ]
