@@ -25,8 +25,14 @@ theme: /
                 body: {
                     items: [
                         {
-                            asd: "asd22"
-                        },
+                          "command": {
+                            "type": "smart_app_data",
+                            "smart_app_data": {
+                              "param1": "value1",
+                              "param2": "value2"
+                            }
+                          }
+                        }
                     ],
                 }
             };
