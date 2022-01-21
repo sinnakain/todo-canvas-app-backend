@@ -12,15 +12,14 @@ theme: /
         
             var url = "https://sfzrwp00vg.execute-api.us-east-2.amazonaws.com/default/nodejs-hello-world-function";
         
-            $jsapi.log("заолупа");
-        
+
             var response = $http.query(url);
             if (response.isOk) {
                 $temp.rawBody = response.data;
             }
-            $jsapi.log(response.data.current);
+            $jsapi.log("Http response data: " + response.data);
             
-            $response.replies.push({
+            $response.push({
                 type: 'raw',
                 body: {
                     pr: "ddds"
