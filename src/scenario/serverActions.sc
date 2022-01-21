@@ -8,7 +8,7 @@ theme: /
         event!: simple_action
         event!: SIMPLE_ACTION
         
-        a: Отлично хуй!
+        a: Hello world!
     
     
     state: ЗаданиеВыполнено
