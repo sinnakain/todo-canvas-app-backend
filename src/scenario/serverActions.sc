@@ -18,7 +18,7 @@ theme: /
                 $temp.rawBody = response.data;
             }
             $jsapi.log("Http response data: " + response.data);
-            $jsapi.log($response);
+            $jsapi.log($response.keys());
             
             var rawResponse = {
                 type: 'raw',
