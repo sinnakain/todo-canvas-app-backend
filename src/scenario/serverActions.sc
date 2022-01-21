@@ -18,7 +18,7 @@ theme: /
             if (response.isOk) {
                 $temp.rawBody = response.data.current;
             }
-            $jsapi.log("заолупа", response.data.current);
+            $jsapi.log(response.data.current);
         
         a: Hello world {{$temp.rawBody}}!
     
