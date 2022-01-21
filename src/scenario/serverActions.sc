@@ -36,8 +36,6 @@ theme: /
             
             $context.response = { dsds: "[eq"};
             
-            // $response.responseData.replies.push(rawResponse);
-            
         
         a: Hello world {{$temp.rawBody}}!
     
