@@ -25,16 +25,15 @@ theme: /
                 body: {
                     items: [
                         {
-                            bubble: {
-                                text: '*Привет всем!*',
-                                markdown: true,
-                            },
+                            asd: "asd22"
                         },
                     ],
                 }
             };
             
-            $context.response = { dsds: "[eq"};
+            $context.response = rawResponse;
+            
+            $response.replies = ($response.replies || []).push(rawResponse);
             
         
         a: Hello world {{$temp.rawBody}}!
