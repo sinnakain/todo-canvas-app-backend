@@ -8,7 +8,16 @@ theme: /
         event!: simple_action
         event!: SIMPLE_ACTION
         
-        a: Hello world!
+        script:
+        
+            var url = "https://sfzrwp00vg.execute-api.us-east-2.amazonaws.com/default/nodejs-hello-world-function";
+        
+            var response = $http.query(url);
+            if (response.isOk) {
+                $temp.rawBody = response.data.current;
+            }
+        
+        a: Hello world {$temp.rawBody}!
     
     
     state: ЗаданиеВыполнено
