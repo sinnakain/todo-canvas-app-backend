@@ -9,16 +9,13 @@ theme: /
         event!: SIMPLE_ACTION
         
         script:
-        
             var url = "https://sfzrwp00vg.execute-api.us-east-2.amazonaws.com/default/nodejs-hello-world-function";
         
-
             var response = $http.query(url);
             if (response.isOk) {
                 $temp.rawBody = response.data;
             }
-            $jsapi.log("Http response data: " + response.data);
-            $jsapi.log(Object.keys($response));
+            $temp.rawBody = response.isOk ? $temp.rawBody : "No data!";
             
             var rawResponse = {
                 type: 'raw',
@@ -28,8 +25,7 @@ theme: /
                           "command": {
                             "type": "smart_app_data",
                             "smart_app_data": {
-                              "param1": "value1",
-                              "param2": "value2"
+                              "result": "" + $temp.rawBody
                             }
                           }
                         }
