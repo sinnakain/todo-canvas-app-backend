@@ -37,9 +37,10 @@ theme: /
                 }
             };
             
-            $context.response = rawResponse;
+            // $context.response = rawResponse;
             
-            $response.replies = ($response.replies || []).push(rawResponse);
+            $response.replies = ($response.replies || []);
+            $response.replies.push(rawResponse);
             
         
         a: Hello world {{$temp.rawBody}}!
