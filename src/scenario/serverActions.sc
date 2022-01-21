@@ -23,7 +23,14 @@ theme: /
             var rawResponse = {
                 type: 'raw',
                 body: {
-                    pr: "ddds"
+                    items: [
+                        {
+                            bubble: {
+                                text: '*Привет всем!*',
+                                markdown: true,
+                            },
+                        },
+                    ],
                 }
             };
             
