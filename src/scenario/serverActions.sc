@@ -19,6 +19,14 @@ theme: /
                 $temp.rawBody = response.data;
             }
             $jsapi.log(response.data.current);
+            
+            $response.replies.push({
+                type: 'raw',
+                body: {
+                    pr: "ddds"
+                }
+            });
+            
         
         a: Hello world {{$temp.rawBody}}!
     
