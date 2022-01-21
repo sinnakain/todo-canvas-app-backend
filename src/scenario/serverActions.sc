@@ -27,7 +27,9 @@ theme: /
                 }
             };
             
-            // $response.push();
+            
+            
+            $response.responseData.replies.push(rawResponse);
             
         
         a: Hello world {{$temp.rawBody}}!
