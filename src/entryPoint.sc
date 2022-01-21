@@ -1,18 +1,5 @@
 require: slotfilling/slotFilling.sc
   module = sys.zb-common
-  
-# Подключение javascript обработчиков
-require: js/getters.js
-require: js/reply.js
-require: js/actions.js
-require: js/findItem.js
-
-# Подключение сценарных файлов
-require: scenario/addNote.sc
-require: scenario/doNote.sc
-require: scenario/deleteNote.sc
-require: scenario/serverActions.sc
-
 
 patterns:
     $AnyText = $nonEmptyGarbage
@@ -46,7 +33,44 @@ theme: /
         else:
             a: Добро пожаловать в заметки!
 
-
     state: Fallback
         event!: noMatch
         a: Я не понимаю.
+
+
+    state: ПростойАктион
+        event!: simple_action
+        event!: SIMPLE_ACTION
+        
+        script:
+            var url = "https://sfzrwp00vg.execute-api.us-east-2.amazonaws.com/default/nodejs-hello-world-function";
+        
+            var response = $http.query(url);
+            if (response.isOk) {
+                $temp.rawBody = response.data;
+            }
+            $temp.rawBody = response.isOk ? $temp.rawBody : "No data!";
+            
+            var rawResponse = {
+                type: 'raw',
+                body: {
+                    items: [
+                        {
+                          "command": {
+                            "type": "smart_app_data",
+                            "smart_app_data": {
+                              "result": "" + $temp.rawBody
+                            }
+                          }
+                        }
+                    ],
+                }
+            };
+            
+            // $context.response = rawResponse;
+            
+            $response.replies = ($response.replies || []);
+            $response.replies.push(rawResponse);
+            
+        
+        a: Hello world {{$temp.rawBody}}!
