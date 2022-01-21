@@ -16,7 +16,7 @@ theme: /
         
             var response = $http.query(url);
             if (response.isOk) {
-                $temp.rawBody = response.data.current;
+                $temp.rawBody = response.data;
             }
             $jsapi.log(response.data.current);
         
