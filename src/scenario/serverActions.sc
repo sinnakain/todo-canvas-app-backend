@@ -17,7 +17,7 @@ theme: /
                 $temp.rawBody = response.data.current;
             }
         
-        a: Hello world {$temp.rawBody}!
+        a: Hello world {{$temp.rawBody}}!
     
     
     state: ЗаданиеВыполнено
