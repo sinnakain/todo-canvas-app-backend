@@ -49,4 +49,4 @@ theme: /
 
     state: Fallback
         event!: noMatch
-        a: Я не понима1ю.
+        a: Я не понимаю.
